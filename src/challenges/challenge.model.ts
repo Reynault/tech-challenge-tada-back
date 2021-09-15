@@ -23,6 +23,13 @@ export class Challenge {
   })
   description: string;
 
+  @Field({ nullable: false })
+  @Prop({
+    type: String,
+    required: true,
+  })
+  text: string;
+
   @Field(() => Int, { nullable: false })
   @Prop({
     type: Number,

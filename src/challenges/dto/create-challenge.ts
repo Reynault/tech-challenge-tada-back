@@ -23,6 +23,11 @@ export class CreateChallenge {
   @IsString()
   @MaxLength(254)
   description: string;
+  @Field(() => String)
+  @IsNotEmpty()
+  @IsString()
+  @MaxLength(13000)
+  text: string;
   @Field(() => Number)
   @IsNotEmpty()
   @IsInt()

@@ -7,12 +7,14 @@ type Challenge {
   description: String!
   difficulty: Int!
   name: String!
+  text: String!
 }
 
 input CreateChallenge {
   description: String!
   difficulty: Float!
   name: String!
+  text: String!
 }
 
 type Mutation {
@@ -30,4 +32,5 @@ input UpdateChallenge {
   description: String
   difficulty: Float
   name: String
+  text: String
 }
