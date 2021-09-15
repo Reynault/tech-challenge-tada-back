@@ -1,0 +1,33 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Challenge {
+  _id: String!
+  description: String!
+  difficulty: Int!
+  name: String!
+}
+
+input CreateChallenge {
+  description: String!
+  difficulty: Float!
+  name: String!
+}
+
+type Mutation {
+  createChallenge(newChallenge: CreateChallenge!): Challenge!
+  deleteChallenge(id: String!): Challenge!
+  updateChallenge(id: String!, newChallenge: UpdateChallenge!): Challenge!
+}
+
+type Query {
+  getChallenge(id: String!): Challenge!
+  getChallenges: [Challenge!]!
+}
+
+input UpdateChallenge {
+  description: String
+  difficulty: Float
+  name: String
+}

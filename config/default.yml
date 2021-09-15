@@ -1,0 +1,21 @@
+server:
+  host: 0.0.0.0
+  port: 3001
+  cors:
+    - "http://0.0.0.0:3000"
+    - "http://127.0.0.1:3000"
+    - "http://localhost:3000"
+mongodb:
+  uri_prefix: mongodb://
+  login: root
+  password: database_password
+  host: 0.0.0.0
+  port: 27017
+  database: challengeDB
+  uri_suffix: ?authSource=
+  authdb: admin
+  portable: false
+  options:
+    useNewUrlParser: true
+    useUnifiedTopology: true
+    useFindAndModify: false

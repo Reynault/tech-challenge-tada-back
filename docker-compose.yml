@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  mongo_dev:
+    container_name: mongo_dev
+    image: mongo:latest
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: database_password
+    volumes:
+      - ./db/data:/data/db
+      - ./db/entrypoint:/docker-entrypoint-initdb.d
